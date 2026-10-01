@@ -1,0 +1,268 @@
+31-March-2026 19:53:31---Student: ..
+31-March-2026 19:53:31----Code compiles:PASS
+Launch Suite:
+  31-March-2026 19:53:32----exit causes process to terminate with correct return code:OK
+  31-March-2026 19:53:36----Shell message is displayed, uses exit to test:OK
+Result:PASS
+Unknown Command Message:
+  31-March-2026 19:53:40----Unknown command should display corresponding message:OK
+  31-March-2026 19:53:44----Multiple unknown commands:OK
+Result:PASS
+Long Command Message:
+  31-March-2026 19:53:48----A not-too-long and legal command input is valid:OK
+  31-March-2026 19:53:52----Long command input is invalid:OK
+  31-March-2026 19:53:56----Long command message takes priority:OK
+Result:PASS
+Echo Simple Messages:
+  31-March-2026 19:54:00----Echo of one character displays correctly:OK
+  31-March-2026 19:54:04----Echo of simple message displays correctly:OK
+  31-March-2026 19:54:08----Echo of simple message displays correctly v3:OK
+  31-March-2026 19:54:12----Echo of simple message displays correctly v3:OK
+  31-March-2026 19:54:16----Echo of simple message does not show errors:OK
+Result:PASS
+Echo Special Characters:
+  31-March-2026 19:54:20----Echo of mixed message displays correctly:OK
+  31-March-2026 19:54:24----echo with quotes has no special meaning:OK
+  31-March-2026 19:54:28----echo ignores extra spaces:OK
+Result:PASS
+Multiple Commands:
+  31-March-2026 19:54:32----Two echo commands display correctly:OK
+  31-March-2026 19:54:36----Two echo commands do not show error:OK
+  31-March-2026 19:54:40----Echo commands work while other commands error:OK
+Result:PASS
+Simple variables accesses:
+  31-March-2026 19:54:44----Declare and access a single variable:OK
+  31-March-2026 19:54:46----Declare and access a single variable:OK
+  31-March-2026 19:54:48----Tests for correct evaluation of variable expansions containing only intitialized variables:OK
+  31-March-2026 19:54:50----Tests for correct evaluation of variable expansions containing variables plus plaintext and uninitialized variables:OK
+Result:PASS
+Variable integration with other commands:
+  31-March-2026 19:54:52----Declare a single variable:OK
+  31-March-2026 19:54:54----Declare and access two variables:OK
+Result:PASS
+Custom variable accesses:
+  31-March-2026 19:54:56----Access variables in separate lines:OK
+  31-March-2026 19:54:58----Access variables in separate lines v2:OK
+Result:PASS
+Echo without variables displays plain text:
+  31-March-2026 19:55:00----Test echo without any variable expansion:OK
+  31-March-2026 19:55:02----Test echo with standalone $:OK
+  31-March-2026 19:55:04----Non-existing variable displays as an empty string:OK
+Result:PASS
+Variable values can be redefined:
+  31-March-2026 19:55:06----Variable value is redefined appropriately:OK
+  31-March-2026 19:55:08----Variable value is redefined appropriately v2:OK
+Result:PASS
+Variable formatting edge cases:
+  31-March-2026 19:55:10----Variables accesses separate by the first equal:OK
+  31-March-2026 19:55:12----Variable declaration with spaces is not supported:OK
+Result:PASS
+Advanced tests:
+  31-March-2026 19:55:15----Declare and access 100 variables:OK
+Result:PASS
+Expanding into builtin commands:
+  31-March-2026 19:55:25----Tests that expanding into a builtin command works:OK
+Result:PASS
+Truncating tokens:
+  31-March-2026 19:55:27----Tests a token that expands into more than 128 chars is truncated:OK
+  31-March-2026 19:55:29----Tests a token that expands into 128 chars is not truncated:OK
+  31-March-2026 19:55:31----Tests a token that expands into more than 128 chars doesn't throw an error:OK
+  31-March-2026 19:55:33----Tests a token that expands into more than 128 chars (from more than one expansion) is truncated:OK
+  31-March-2026 19:55:35----Tests a token that expands into more than 128 chars (from more than one expansion) is truncated while others are not:OK
+  31-March-2026 19:55:37----Tests truncation of multiple tokens that are longer than 128 chars:OK
+Result:PASS
+correct cat argument setup:
+  31-March-2026 19:55:39----Cat on a file that contains one word:OK
+Result:PASS
+cat correctly reads sample files:
+  31-March-2026 19:55:43----Cat on a file that contains multiple words:OK
+  31-March-2026 19:55:47----Cat on a file that contains multiple lines:OK
+Result:PASS
+correct wc argument setup:
+  31-March-2026 19:55:51----wc on an empty file:OK
+Result:PASS
+wc reports correct counts on sample files:
+  31-March-2026 19:55:55----wc on a file that contains mutliple lines:OK
+  31-March-2026 19:55:59----wc on a file that contains mutliple words in a line:OK
+  31-March-2026 19:56:03----wc on a file that contains blank lines:OK
+Result:PASS
+Sample ls runs:
+  31-March-2026 19:56:07----Create a single sub-directory with a single file:OK
+  31-March-2026 19:56:11----Create a single sub-directory with multiple files:OK
+  31-March-2026 19:56:17----ls a directory:OK
+Result:PASS
+Sample cd runs:
+  31-March-2026 19:56:23----cd without a path and go to the user's home directory:OK
+  31-March-2026 19:56:29----cd into a directory and display the files:OK
+  31-March-2026 19:56:35----cd into a nested directory and display the files:OK
+Result:PASS
+ls error handling:
+  31-March-2026 19:56:43----ls on an invalid path reports an error:OK
+Result:PASS
+ls handles edge cases correctly:
+  31-March-2026 19:56:49----ls a single file through a variable identifier:OK
+  31-March-2026 19:56:53----Create a single sub-directory, and ls into that directory:OK
+Result:PASS
+ls filters files correctly:
+  31-March-2026 19:56:57----ls correctly filters files:OK
+  31-March-2026 19:57:01----ls correctly filters files v2:OK
+Result:PASS
+ls --a shows hidden files correctly:
+  31-March-2026 19:57:05----Test ls with one hidden file:OK
+  31-March-2026 19:57:09----Test ls with multiple hidden files:OK
+  31-March-2026 19:57:13----Test ls with a showing hidden directories and folders correctly in a recursive ls:OK
+Result:PASS
+ls can handle an arbitrary number of dots:
+  31-March-2026 19:57:21----ls with varying number of dots 2 in deep folder structure:OK
+  31-March-2026 19:57:22----ls with varying number of dots 3 in deep folder structure:OK
+  31-March-2026 19:57:23----ls with varying number of dots 4 in deep folder structure:OK
+  31-March-2026 19:57:23----ls with varying number of dots 5 in deep folder structure:OK
+  31-March-2026 19:57:24----ls with varying number of dots 6 in deep folder structure:OK
+  31-March-2026 19:57:25----ls with varying number of dots 7 in deep folder structure:OK
+Result:PASS
+Recursive ls displays files correctly:
+  31-March-2026 19:57:31----Recursive ls with depth 0 does not capture inner files:OK
+  31-March-2026 19:57:37----Recursive ls with depth 1 captures inner files:OK
+  31-March-2026 19:57:43----Recursive ls supports --d argument before --rec:OK
+Result:PASS
+Advanced Tests:
+  31-March-2026 19:57:49----Recursive ls correctly searches files in sub-directories:OK
+Result:PASS
+Sample echo pipes:
+  31-March-2026 19:57:55----Piping echo to echo works the same as normal echo:OK
+  31-March-2026 19:57:59----Piping echo to echo works the same as normal echo:OK
+Result:PASS
+Sample ls & cd pipes:
+  31-March-2026 19:58:03----Piping the output of ls to ls works the same as normal ls:OK
+  31-March-2026 19:58:07----Pipes involving cd do not change the current directory:OK
+Result:PASS
+Sample wc pipe:
+  31-March-2026 19:58:11----Pipe the output of ls to wc displays valid counts:OK
+  31-March-2026 19:58:15----Pipe the output of echo to wc displays valid counts:OK
+Result:PASS
+Sample cat pipes:
+  31-March-2026 19:58:19----Cat reading input from echo:OK
+  31-March-2026 19:58:23----Cat builtin supports pipes:OK
+Result:PASS
+Pipes with variables:
+  31-March-2026 19:58:27----Variable declaration in pipes is not reflected:OK
+  31-March-2026 19:58:31----Variable re-define in pipes is not reflected:OK
+Result:PASS
+Pipes Error Handling:
+  31-March-2026 19:58:36----Pipe line cannot exceed the character limit:OK
+  31-March-2026 19:58:40----A failing command does not stop the pipe chain:OK
+Result:PASS
+Pipe Edge Cases:
+  31-March-2026 19:58:44----Spaces are not required within pipes:OK
+  31-March-2026 19:58:48----Pipe to a command that does not exist reports unknown error:OK
+Result:PASS
+Three Level pipes:
+  31-March-2026 19:58:52----Cat builtin supports nested pipes:OK
+  31-March-2026 19:58:56----Three-level pipe with echo, cat, and wc:OK
+Result:PASS
+Correct functionality of ps with pipes:
+  31-March-2026 19:59:00----Test correct output of ps when sleep is piped into ps:OK
+Result:PASS
+Bash Commands are executed correctly:
+  31-March-2026 19:59:05----Bash Builtins are fetched and do not report errors:OK
+  31-March-2026 19:59:09----Command that do not exist report errors:OK
+  31-March-2026 19:59:13----tail command works correctly:OK
+Result:PASS
+Bash Commands support pipes:
+  31-March-2026 19:59:17----tail command supports pipes:OK
+  31-March-2026 19:59:21----head command supports pipes:OK
+Result:PASS
+Sample bg runs:
+  31-March-2026 19:59:25----A simple background echo correctly completes:OK
+  31-March-2026 19:59:31----Shell can execute other commands while a background process runs:OK
+  31-March-2026 19:59:37----Shell can execute multiple background processes:OK
+Result:PASS
+Sample ps runs:
+  31-March-2026 19:59:43----ps command shows a background process:OK
+  31-March-2026 19:59:49----ps command shows multiple background processes:OK
+Result:PASS
+Background jobs finish correctly:
+  31-March-2026 19:59:55----Background process completes with a corresponding DONE message:OK
+  31-March-2026 20:00:01----Background process is DONE after terminated by a kill:OK
+Result:PASS
+bg edge cases:
+  31-March-2026 20:00:07----Background process counts reset to 1 after all processes complete:OK
+  31-March-2026 20:00:13----Background process line cannot exceed character limits:OK
+Result:PASS
+bg integrations tests:
+  31-March-2026 20:00:19----Pipes work correctly while background process runs:OK
+Result:PASS
+bg stdin tests:
+  31-March-2026 20:00:25----Testing 'cat &' exits immediately:OK
+Result:PASS
+Shell survives a control C:
+  31-March-2026 20:00:31----A shell can survive a SIGINT signal:OK
+Result:PASS
+Sample kill runs:
+  31-March-2026 20:00:35----A shell can terminate another shell:OK
+  31-March-2026 20:00:39----A shell can terminate another shell by sending a signal:OK
+Result:PASS
+Kill error handling:
+  31-March-2026 20:00:43----kill reports an error if the pid is invalid:OK
+  31-March-2026 20:00:47----Program reports an error if the signal is invalid:OK
+Result:PASS
+Kill Integration Tests:
+  31-March-2026 20:00:51----A shell can terminate another shell while accepting variables:OK
+Result:PASS
+Builtin Terminates on Ctrl C:
+  31-March-2026 20:00:55----Builtin command terminates on a SIGINT signal, returning control to shell:OK
+Result:PASS
+Tests if additional processes are left running after the server is closed:
+  31-March-2026 20:00:59----Additional processes - clean simple close with close-server command:OK
+  31-March-2026 20:01:04----Additional processes - simple close with exit command:OK
+  31-March-2026 20:01:09----Additional processes - client connect and close with clean close-server command:OK
+  31-March-2026 20:01:14----Additional processes - client connect and close with exit command:OK
+  31-March-2026 20:01:19----Additional processes - client write and close:OK
+  31-March-2026 20:01:24----Additional processes - client connect, execute server commands, then close:OK
+  31-March-2026 20:01:29----Additional processes - Server sends message to itself then closes:OK
+Result:PASS
+Server commands are setup correctly:
+  31-March-2026 20:01:34----Able to launch and close a server correctly:OK
+  31-March-2026 20:01:38----Server reports an error when launched without a port:OK
+  31-March-2026 20:01:42----Server shuts down after shell exits:OK
+Result:PASS
+Sample send runs:
+  31-March-2026 20:01:48----A shell can exchange a message with itself through a socket:OK
+  31-March-2026 20:01:52----Two separate shells can exchange a message:OK
+Result:PASS
+Send error handling:
+  31-March-2026 20:01:56----Send reports an error when no port is provided:OK
+  31-March-2026 20:02:01----Send reports an error when no hostname is provided:OK
+  31-March-2026 20:02:06----Client message length limit simple:OK
+  31-March-2026 20:02:11----Client message length limit with variable expansions:OK
+Result:PASS
+Send edge cases are handled correctly:
+  31-March-2026 20:02:16----An error when on an occupied port:OK
+  31-March-2026 20:02:20----Shell messages ignore extra spaces:OK
+  31-March-2026 20:02:24----Simple shell messages expand variables:OK
+Result:PASS
+Advanced tests:
+  31-March-2026 20:02:28----Ten separate shells can send messages:OK
+  31-March-2026 20:02:43----Pipes work while a server is running:OK
+Result:PASS
+Long client single message:
+  31-March-2026 20:02:45----A shell can exchange a message with another shell through start-client:OK
+  31-March-2026 20:02:50----A shell can exchange a message with another shell through start-client v2:OK
+Result:PASS
+Long client multiple messages:
+  31-March-2026 20:02:55----A client launched with start-client can send multiple messages:OK
+Result:PASS
+Multiple clients single message:
+  31-March-2026 20:03:05----Multiple clients single message:OK
+Result:PASS
+Client error handling:
+  31-March-2026 20:03:12----Client reports an error when no hostname is provided:OK
+  31-March-2026 20:03:17----Client reports an error when no hostname is provided:OK
+  31-March-2026 20:03:22----Client message length limit simple:OK
+  31-March-2026 20:03:27----Client message length limit with variable expansions:OK
+Result:PASS
+Connected command:
+  31-March-2026 20:03:32----Connected command:OK
+Result:PASS
+31-March-2026 20:03:39--- Test Suites Passed 62.0/62
+31-March-2026 20:03:39 FINISHED
